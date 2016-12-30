@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-#define LEN 10
+#define LEN 100000
 
 void gen(float a[]) {
 	int i;
@@ -17,10 +17,10 @@ void prnt(float a[]) {
 }
 
 int main() {
-	int i, j, sw, ch = 0;
-	float a[LEN];
+	int i, j, ch = 0;
+	float sw, a[LEN];
 	gen(a);
-	prnt(a);
+	//prnt(a);
 
 	for(i=0;i<LEN;i++) {
 		for(j=0;j<LEN-i-1;j++) {
@@ -36,7 +36,7 @@ int main() {
 		ch = 0;
 	}
 
-	prnt(a);
+	//prnt(a);
 
 
 	return 0;
