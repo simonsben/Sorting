@@ -22,8 +22,8 @@ int main() {
 	gen(a);
 	prnt(a);
 
-	for(i=LEN;i>0;i--) {
-		for(j=i;j<LEN-1;j++) {
+	for(i=0;i<LEN;i++) {
+		for(j=0;j<LEN-i-1;j++) {
 			if(a[j] > a[j+1]) {
 				sw = a[j];
 				a[j] = a[j+1];
@@ -35,7 +35,7 @@ int main() {
 			break;
 		ch = 0;
 	}
-	
+
 	prnt(a);
 
 
