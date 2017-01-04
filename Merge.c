@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-#define LEN 100000
+#define LEN 10
 
 void gen(float a[]) {
 	int i;
@@ -16,35 +16,31 @@ void prnt(float a[]) {
 		printf("%.2f\n", a[i]);
 }
 
-void swap(float a[], int b, int c)  {
-    float sw = a[b];
-    a[b] = a[c];
-    a[c] = sw;
-}
-
-int big(int a, int b) {
-    if(a > b)
-        return a;
-    else 
-        return b;
-}
-
-int small(int a, int b) {
-    if(a < b)
-        return a;
-    else 
-        return b;
+float* clone(float a[], int beg, int end) {
+    float* tmp = malloc(sizeof(float)*(end-beg));
+    int i;
+    for(i=0;i<(end-beg);i++)
+        tmp = a[i];
+    return tmp;
 }
 
 void merge(float a[], int b1, int b2, int e1, int e2)  {
     int i;
-    for(i=;i<big(e1-b1, e2-b2);i++) {
-
+    int lft = (e1-b1), rgt = (e2-b2);
+    int mk = lft+rgt, mkt = rgt;
+    float tmp* = clone(a, b1, e2);
+    for(i=0;i<(b1-e1);i++) {
+        if(lft == 0 || tmp[b1+lft] < tmp[b2+rgt])
+            a[b1+i] = tmp[rgt-lft];
+        else
+            a[b1+i] = tmp[mk-rgt];
     }
 }
 
 int main() {
     float a[LEN];
+    gen(a);
+
 
     return 0;
 }
