@@ -33,6 +33,8 @@ int main() {
         for(j=i;j>0;j--) {
             if(a[j] < a[j-1])
                 swap(a, j, j-1);
+            else 
+                break;
         }
     }
 
