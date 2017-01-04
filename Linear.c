@@ -12,7 +12,7 @@ void prnt(float a[]) {
 void gen(float a[]) {
 	int i;
 	for(i=0;i<LEN;i++)
-		a[i] = rand() % LEN;
+		a[i] = rand();
 }
 
 int main() {

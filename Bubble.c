@@ -6,7 +6,7 @@
 void gen(float a[]) {
 	int i;
 	for(i=0;i<LEN;i++)
-		a[i] = rand() % 10;
+		a[i] = rand();
 }
 
 void prnt(float a[]) {
