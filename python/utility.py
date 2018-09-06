@@ -10,3 +10,12 @@ def swap(set, a, b):
     hold = set[a]
     set[a] = set[b]
     set[b] = hold
+
+def average(list):
+    length, sum = len(list), 0
+
+    for num in list:
+        sum += num
+
+    sum /= length
+    return sum

@@ -1,8 +1,20 @@
-from utility import generate_data
-from bubble import bubble_sort
+from utility import generate_data, average
+from linear import linear_sort, linear_inline_sort
 from time import time
 
-data_set = generate_data(15)
+times = []
+num_tests = 1000000
 
-bubble_sort(data_set)
-print(data_set)
+for i in range(num_tests):
+    set = generate_data(5)
+
+    end_index = len(set) - 1
+
+    start = time()
+    # linear_inline_sort(set, 0, end_index)
+    linear_sort(set)
+    end = time()
+
+    times.append(end - start)
+
+print('Average time: ' + str(average(times)))
