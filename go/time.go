@@ -1,18 +1,25 @@
-package sort
+package main
 
 import (
 	"fmt"
+	"time"
 )
 
-// const lengths = []int{10}
-const length int = 10
+var lengths = []int{100, 1000, 10000, 100000}
 
 func main() {
-	dataSet := generateNums(length)
-	fmt.Printf("Before")
-	printArray(dataSet)
-	linearSort(dataSet)
+	testLinear()
+}
 
-	fmt.Printf("After")
-	printArray(dataSet)
+func testLinear() {
+
+	for i := 0; i < len(lengths); i++ {
+		dataSet := generateNums(lengths[i])
+
+		start := time.Now()
+		linearSort(dataSet)
+		elapsed := time.Since(start)
+
+		fmt.Printf("Time for n=%d %.5fs\n", lengths[i], elapsed.Seconds())
+	}
 }

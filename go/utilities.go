@@ -1,11 +1,13 @@
-package sort
+package main
 
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 func generateNums(count int) []float64 {
+	rand.Seed(time.Now().UTC().UnixNano())
 	dataSet := make([]float64, count)
 
 	for i := 0; i < count; i++ {
@@ -22,7 +24,8 @@ func swap(dataSet []float64, a, b int) {
 }
 
 func printArray(dataSet []float64) {
+	fmt.Printf("\nPrinting slice:\n")
 	for i := 0; i < len(dataSet); i++ {
-		fmt.Printf("%f", dataSet[i])
+		fmt.Printf("%f\n", dataSet[i])
 	}
 }
