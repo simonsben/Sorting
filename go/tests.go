@@ -55,7 +55,7 @@ func checkSort() {
 	fmt.Println("Before")
 	printArray(dataSet)
 
-	insertSort(dataSet)
+	bubbleSort(dataSet)
 
 	fmt.Println("After")
 	printArray(dataSet)
